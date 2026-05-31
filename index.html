@@ -59,6 +59,8 @@
         <div class="stat"><span class="stat-n">15+</span><span class="stat-l">Projects</span></div>
         <div class="stat-sep"></div>
         <div class="stat"><span class="stat-n">Best Paper</span><span class="stat-l">MTME 2026</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-n">2nd Place</span><span class="stat-l">FYP · GIKI 2026</span></div>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -222,26 +224,37 @@
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
+        <!-- PROJECT 1 — FYP (2nd Place) -->
         <div class="project-card featured" data-cat="energy" data-aos>
           <div class="proj-img-wrap">
             <div class="proj-img-placeholder">
-              <span>📐</span>
-              <small>Add CAD/simulation render of hybrid turbine</small>
+              <span>🌀</span>
+              <small>Add CAD render or CFD contour of the helical VAWT rotor</small>
             </div>
-            <div class="proj-tag-top">Final Year Project · Ongoing</div>
+            <div class="proj-tag-top">🥈 Senior Design Project · 2nd Place · GIKI 2026</div>
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Energy</span><span>CFD</span><span>Structural</span></div>
-            <h3>Hybrid Multi-Stage Turbine for Vehicle-Induced Wind Energy Harvesting</h3>
-            <p class="proj-role"><strong>Role:</strong> Lead designer — aerodynamics, structural modeling, performance evaluation</p>
+            <div class="proj-cats"><span>Energy Systems</span><span>CFD</span><span>Structural</span><span>Fabrication</span></div>
+            <h3>Design &amp; Development of a Vertical Axis Wind Turbine for Industrial Exhaust Energy Recovery</h3>
+            <p class="proj-role"><strong>Role:</strong> Design &amp; analysis lead — aerodynamic sizing, CFD simulation, structural design, fabrication, and experimental testing</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Roadside energy generation infrastructure remains underutilised. Vehicles in motion generate substantial transient wind loads that dissipate as waste energy.</p>
-                <p><strong>Approach:</strong> Designed and simulated a hybrid turbine geometry capable of harvesting vehicle-induced wind across variable flow directions. Performed aerodynamic design, blade geometry optimization, structural integrity modeling, and full-system performance evaluation targeting scalable, infrastructure-level deployment.</p>
-                <p><strong>Tools:</strong> CREO Parametric · SolidWorks · ANSYS (Fluent / Mechanical)</p>
-                <p><strong>Status:</strong> Design iteration and simulation ongoing. Physical prototype phase to follow.</p>
+                <p><strong>Problem:</strong> Industrial facilities continuously discharge high-velocity exhaust air — typically at 15–20 m/s — through ventilation stacks and outlet ducts. This kinetic energy is routinely released to the atmosphere without recovery. Existing small-scale VAWTs are designed for low atmospheric wind speeds and are poorly matched to the high-speed, forced, directionally stable flow conditions found at industrial exhaust outlets. A turbine explicitly designed for this regime did not exist in commercial deployment.</p>
+
+                <p><strong>Objective:</strong> Design, computationally validate, fabricate, and experimentally test a Vertical Axis Wind Turbine specifically optimised for industrial exhaust airflow — capable of extracting useful mechanical and electrical power from a previously unexploited on-site energy stream.</p>
+
+                <p><strong>Engineering Approach:</strong> Following a structured literature review, a three-bladed helical Darrieus configuration was selected based on its superior torque smoothness and published peak power coefficients of 0.32–0.38. The NACA 0018 symmetric airfoil was chosen for its well-documented performance across the operating Reynolds number range of (1.8–2.4) × 10⁵. Key geometric parameters were derived analytically: chord length 0.18 m, blade height 1.2 m, rotor diameter 0.9 m (aspect ratio H/D = 1.33), rotor solidity 0.19, and a 60° helical twist — selected based on CFD literature establishing 60° as the optimal helix angle for maximum mean power coefficient. The design tip-speed ratio of 4 gives a rated angular velocity of approximately 1700 rpm at the 20 m/s design wind speed.</p>
+
+                <p><strong>CFD Analysis:</strong> Three-dimensional simulation in ANSYS Fluent at the design operating point (λ = 4, V = 20 m/s) characterised blade-surface pressure distributions, velocity fields, and downstream wake structure. CFD-derived average torque: 6.76 N·m. Mechanical power output: ≈ 1.20 kW. Power coefficient: Cp ≈ 0.23 — consistent with the expected gap between idealised analytical estimates (Cp = 0.35) and numerical predictions that capture viscous and three-dimensional losses.</p>
+
+                <p><strong>Fabrication:</strong> A hybrid manufacturing strategy was developed: helical blade cores were produced by additive manufacturing (FDM) — the only practical approach for a continuous 60° NACA 0018 twist at this scale — then reinforced with epoxy-impregnated carbon-fibre composite laminate for structural stiffness and surface quality. The shaft was fabricated from hollow mild-steel tube, supported by a welded steel frame with a two-bearing arrangement. The rotor was coupled to a permanent-magnet generator and instrumented with a tachometer and multimeter for experimental validation.</p>
+
+                <p><strong>Experimental Results:</strong> Testing across 4–10 m/s confirmed physically consistent aerodynamic behaviour. Aerodynamic force per unit span increased from 0.55 N/m at 4 m/s to 2.30 N/m at 10 m/s — broadly following the predicted quadratic velocity dependence. Rotor speed progressed from 70 RPM at 3 m/s to 180 RPM at 8.5 m/s. The local flattening in force increment around 9 m/s was attributed to blade-stall onset and wake interaction effects on the NACA 0018 section at increasing angle of attack — physically consistent with the section's documented stall behaviour.</p>
+
+                <p><strong>Tools:</strong> ANSYS Fluent (3D CFD) · SolidWorks (CAD) · FDM Additive Manufacturing · Carbon-Fibre Composite Layup · Instrumented Test Rig</p>
+
+                <p><strong>Outcome:</strong> Functional full-scale prototype delivered and experimentally validated. Project awarded <strong>2nd Place</strong> in the GIKI Senior Design Project competition, Faculty of Mechanical Engineering, 2026. Results provide a documented design basis and performance dataset for a class of industrial exhaust energy recovery device with no current commercial equivalent.</p>
               </div>
             </div>
           </div>
