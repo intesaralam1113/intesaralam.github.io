@@ -769,6 +769,13 @@ p:last-child { margin-bottom: 0; }
   border-color: var(--border-accent);
 }
 
+.project-card.featured .proj-img-wrap img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background: #161a1f;
+}
+
 @media (max-width: 700px) {
   .project-card.featured { grid-column: span 1; }
 }
@@ -780,7 +787,7 @@ p:last-child { margin-bottom: 0; }
 
 .proj-img-placeholder {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 21/9;
   background: var(--bg-card-hover);
   display: flex;
   flex-direction: column;
