@@ -261,14 +261,15 @@
            <img src="assets/images/th.png" alt="Brayton ORC Cycle" class="project-image">
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Energy</span><span>Thermodynamics</span></div>
-            <h3>Thermodynamic Design &amp; Exergy Analysis of a 150 kW Brayton–ORC Power Plant</h3>
-            <p class="proj-role"><strong>Role:</strong> Primary analyst — cycle design, exergy accounting, parametric optimization</p>
+            <div class="proj-cats"><span>Energy Systems</span><span>Thermodynamics</span><span>Exergy Analysis</span></div>
+            <h3>Thermodynamic Design &amp; Exergy Analysis of a Combined Brayton–ORC Power Plant</h3>
+            <p class="proj-role"><strong>Role:</strong> Primary analyst — cycle architecture, component-level energy and exergy accounting, parametric optimization</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Combined cycle power systems require careful component-level accounting to identify irreversibility hotspots and guide design decisions.</p>
-                <p><strong>Approach:</strong> Designed a combined Brayton–Organic Rankine Cycle power plant. Conducted full energy and exergy analysis at component level — identified major irreversibilities in the combustor and HRSG — and performed parametric studies on ORC boiler pressure to optimize net power output and overall cycle efficiency.</p>
+                <p><strong>Problem:</strong> Simple-cycle gas turbine systems reject a substantial portion of their fuel energy as high-temperature exhaust. Recovering this waste heat through a bottoming cycle significantly improves overall plant efficiency — but designing such a system requires rigorous component-level thermodynamic accounting to locate irreversibility sources and guide sizing decisions.</p>
+                <p><strong>Approach:</strong> Designed a combined Brayton–Organic Rankine Cycle power system targeting 150 kW net output. Performed first-law energy analysis across all major components — compressor, combustion chamber, gas turbine, HRSG, ORC expander, condenser, and feed pump — to establish baseline performance. Followed this with a full second-law exergy analysis to quantify irreversibility at each component, pinpointing the combustor and HRSG as the dominant sources of exergy destruction. Conducted parametric studies on ORC boiler pressure to identify operating conditions that maximised net power output and thermal efficiency of the combined cycle.</p>
+                <p><strong>Engineering Insight:</strong> The exergy analysis revealed that improving combustor design and reducing HRSG temperature mismatch offered greater efficiency gains than optimising the ORC subsystem in isolation — a finding that would not be visible through first-law analysis alone.</p>
                 <p><strong>Tools:</strong> EES (Engineering Equation Solver) · MATLAB</p>
               </div>
             </div>
@@ -281,15 +282,16 @@
            <img src="assets/images/ht.png" alt="Shell and Tube Heat Exchanger CFD Analysis" class="project-image">
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>CFD</span><span>Thermal</span></div>
-            <h3>Shell-and-Tube Heat Exchanger CFD Analysis</h3>
-            <p class="proj-role"><strong>Role:</strong> CFD analyst — mesh design, simulation, design comparison</p>
+            <div class="proj-cats"><span>CFD</span><span>Thermal</span><span>Design Optimisation</span></div>
+            <h3>Turbulent Flow CFD Analysis of a Shell-and-Tube Heat Exchanger — Four-Variant Design Study</h3>
+            <p class="proj-role"><strong>Role:</strong> CFD analyst — geometry design, turbulence modeling, multi-variant simulation, performance trade-off analysis</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Evaluating fin geometry and tube arrangement trade-offs in heat exchanger design requires CFD-level fidelity to capture turbulent flow interactions on the shell side.</p>
-                <p><strong>Approach:</strong> Performed CFD analysis of turbulent shell-side flow using RANS k-ε modeling in COMSOL Multiphysics 6.3. Evaluated four design variants with different fin geometries and tube arrangements, quantified pressure drop and outlet temperature trade-offs, and recommended optimal configurations for balanced thermal performance.</p>
-                <p><strong>Tools:</strong> COMSOL Multiphysics 6.3 · RANS k-ε turbulence model</p>
+                <p><strong>Problem:</strong> Heat exchanger design involves competing objectives: maximising thermal performance while keeping pressure drop — and therefore pumping cost — within acceptable limits. Fin geometry and tube arrangement both influence this trade-off, but predicting the interaction effects requires CFD-level fidelity rather than correlation-based estimates.</p>
+                <p><strong>Approach:</strong> Developed a 2D cross-sectional computational model of shell-side turbulent flow in COMSOL Multiphysics 6.3 using the RANS k-ε turbulence closure, with Reynolds number ≈ 75,000 confirming fully turbulent conditions. Established a validated baseline geometry and then evaluated four distinct design variants: triangular fin augmentation, rectangular fin augmentation, aligned tube arrangement, and reduced tube diameter — each with adapted mesh refinement strategies and consistent boundary conditions. For each variant, extracted velocity fields, pressure drop, and temperature distribution to build a comparative performance matrix.</p>
+                <p><strong>Key Findings:</strong> Rectangular fins delivered the highest thermal enhancement (outlet temperature drop of ~6 K vs. baseline) but at the cost of significantly elevated pressure drop — unsuitable where pumping energy is constrained. The aligned tube configuration offered the best balance of heat transfer reliability and maintainability for routine industrial use. Reduced-diameter tubes cut pressure drop to ~1200 Pa while retaining adequate cooling — the preferred choice for energy-efficient operation.</p>
+                <p><strong>Tools:</strong> COMSOL Multiphysics 6.3 · RANS k-ε turbulence model · Non-isothermal flow interface</p>
               </div>
             </div>
           </div>
@@ -301,15 +303,16 @@
             <img src="assets/images/ml.png" alt="ANN Predictive Maintenance Classification" class="project-image">
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Machine Learning</span><span>Predictive Maintenance</span></div>
-            <h3>ANN-Based Predictive Maintenance Classification</h3>
-            <p class="proj-role"><strong>Role:</strong> ML engineer — architecture, training, validation</p>
+            <div class="proj-cats"><span>Machine Learning</span><span>Predictive Maintenance</span><span>Classification</span></div>
+            <h3>ANN-Based Machine Failure Classification Using Industrial Sensor Data</h3>
+            <p class="proj-role"><strong>Role:</strong> ML engineer — dataset preprocessing, architecture design, training, evaluation, and feature analysis</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Unplanned industrial equipment failure is costly. Sensor data contains latent failure signatures that rule-based systems miss.</p>
-                <p><strong>Approach:</strong> Built an Artificial Neural Network model to classify machine failure states from operational sensor data. Performed feature relevance analysis, trained and validated the model using standard performance metrics and confusion matrix analysis, enabling data-driven early maintenance decisions.</p>
-                <p><strong>Tools:</strong> Python · TensorFlow/Keras · Pandas · Matplotlib</p>
+                <p><strong>Problem:</strong> In manufacturing environments, unplanned equipment failure causes costly downtime and safety risks. Sensor streams — temperature, rotational speed, torque, tool wear — carry latent failure signatures that threshold-based rules consistently miss, particularly in the presence of class imbalance where fault events are rare relative to healthy operation.</p>
+                <p><strong>Approach:</strong> Trained a binary classification ANN on the AI4I 2020 Predictive Maintenance dataset (10,000 samples; 96.6% healthy, 3.4% faulty — a realistic industrial imbalance). Conducted correlation analysis across all sensor features before model design; identified that machine type, air temperature, and process temperature carried the highest relative predictive weight (≈19% each), while tool wear and torque contributed lower but meaningful signal. Built a two-hidden-layer network (64→32 neurons, ReLU activations, Sigmoid output) trained with Adam optimiser and Binary Cross-Entropy loss. Evaluated performance using confusion matrix, precision, recall, and feature importance analysis rather than accuracy alone — critical given the class imbalance. The model achieved an accuracy classified as excellent, with low false-positive rate (FP = 2) and actionable recall on fault cases (TP = 14 from 51 total faults in the test set).</p>
+                <p><strong>Engineering Significance:</strong> The feature importance analysis confirmed that thermal signals dominate failure prediction — insight directly applicable to sensor placement and monitoring system design in real industrial deployments.</p>
+                <p><strong>Tools:</strong> Python · TensorFlow/Keras · Pandas · Matplotlib · Scikit-learn</p>
               </div>
             </div>
           </div>
@@ -323,15 +326,16 @@
 </div>
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Mechatronics</span><span>Additive Mfg.</span></div>
-            <h3>Disaster-Response Robot for Emergency Supply Delivery</h3>
-            <p class="proj-role"><strong>Role:</strong> Structural designer — CAD modeling, load analysis, manufacturing</p>
+            <div class="proj-cats"><span>Mechanism Design</span><span>Robotics</span><span>Additive Mfg.</span></div>
+            <h3>Klann Linkage Walking Robot — Design, Fabrication &amp; Kinematic Validation</h3>
+            <p class="proj-role"><strong>Role:</strong> Structural and mechanism designer — linkage synthesis, SolidWorks CAD, kinematic simulation, fabrication, and prototype testing</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Emergency responders face access constraints in disaster zones where conventional supply delivery is impossible or too slow.</p>
-                <p><strong>Approach:</strong> Designed and developed a mobile robot chassis using additive manufacturing to deliver first-aid supplies in physically inaccessible areas. Conducted structural design, CAD modeling, and load analysis in SolidWorks to verify operational reliability under field loading conditions.</p>
-                <p><strong>Tools:</strong> SolidWorks · FDM 3D Printing · Load / stress analysis</p>
+                <p><strong>Problem:</strong> Wheeled robots fail on rubble, uneven terrain, and debris-filled environments where legged locomotion has clear advantages. Designing a legged robot requires solving a non-trivial kinematic problem: converting continuous rotary motor output into a stable, repeating foot trajectory that lifts, advances, and places without toppling the chassis — using a single actuator.</p>
+                <p><strong>Approach:</strong> Selected the Klann linkage mechanism based on its ability to generate a stable walking gait with a single crank input. Used dedicated linkage synthesis software to determine the motion profile and establish precise link dimensions before any physical hardware was committed. Transferred the verified geometry to SolidWorks for full 3D CAD modelling of all components — two cranks, two rocker arms per side, connecting rods, and leg members — followed by motion study simulation to validate displacement, velocity, and acceleration profiles across a full gait cycle. Material selection was constrained by load-carrying requirements (60–70 g payload), printability, and cost: PLA was selected for FDM 3D printing, enabling the tight geometric tolerances the Klann linkage demands. Electrical components — a 6V DC dual-shaft motor and 9V battery — were sized from force analysis and placed symmetrically to maintain dynamic balance. Total build cost: RS 2,400.</p>
+                <p><strong>Results:</strong> Fully functional prototype demonstrated stable legged locomotion at 0.1 m/s on flat surfaces, with consistent ground contact across all four legs. The robot successfully carried a 60–70 g payload — meeting the design target. Limitation identified: grip loss on high-friction surfaces (carpet) due to foot geometry — a documented design constraint for future iteration.</p>
+                <p><strong>Tools:</strong> Linkage synthesis software · SolidWorks (CAD + Motion Study) · FDM 3D Printing · Embedded DC motor drive</p>
               </div>
             </div>
           </div>
@@ -345,15 +349,16 @@
 </div>
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Structural</span><span>FEA</span></div>
-            <h3>Statically Indeterminate Shaft — Torsional Analysis (Analytical + FEA)</h3>
-            <p class="proj-role"><strong>Role:</strong> Analyst — analytical method + FEA verification</p>
+            <div class="proj-cats"><span>Structural Mechanics</span><span>FEA</span><span>Design Iteration</span></div>
+            <h3>Design of a Statically Indeterminate Shaft Under Torsional Loading — Analytical + Dual FEA Verification</h3>
+            <p class="proj-role"><strong>Role:</strong> Lead analyst — compatibility-based analytical design, three-iteration refinement, ANSYS and SolidWorks FEA verification</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Torsional loading in multi-segment shafts creates statically indeterminate reactions that require careful analytical treatment and computational verification.</p>
-                <p><strong>Approach:</strong> Analyzed a multi-segment statically indeterminate shaft using compatibility equations (analytical) and finite element analysis in ANSYS. Evaluated stress distribution, angle of twist, and factor of safety across loading scenarios to validate design assumptions against failure criteria.</p>
-                <p><strong>Tools:</strong> ANSYS Mechanical · Analytical hand calculations</p>
+                <p><strong>Problem:</strong> A four-segment shaft — fixed at both ends, with two applied torques — is statically indeterminate: the support reactions cannot be found from equilibrium alone. Simultaneously satisfying a maximum shear stress limit (factor of safety &gt; 2 against ultimate shear of 70 MPa), a target angle of twist across a specified segment (2.5°–3.5°), and a practical constraint that all cross-section diameters must be whole-number values creates a tightly constrained multi-objective design problem with no closed-form solution.</p>
+                <p><strong>Approach:</strong> Resolved static indeterminacy analytically using compatibility equations (zero net angle of twist across the full shaft length), then applied torsion formulae iteratively across three design cycles. Each iteration adjusted solid and hollow cross-section radii to bring both the factor of safety and twist angle within specification simultaneously — revealing an inherent trade-off: increasing outer radius improves safety factor but reduces twist angle, and vice versa. Three distinct design iterations were documented, with the final design achieving the required balance. Results were then independently verified using both ANSYS Mechanical APDL and SolidWorks Simulation. FEA confirmed maximum shear stress of 32.6 MPa at the fixed supports and angle of twist values at C and E consistent with analytical predictions — validating the hand-calculation approach and demonstrating solver convergence.</p>
+                <p><strong>Material:</strong> Aluminium Alloy 1100-H14 (G = 26 GPa) — a ductile, homogeneous material appropriate for torsional loading analysis.</p>
+                <p><strong>Tools:</strong> ANSYS Mechanical APDL · SolidWorks Simulation · Analytical torsion and compatibility equations</p>
               </div>
             </div>
           </div>
@@ -365,15 +370,16 @@
            <img src="assets/images/sdc.png" alt="PID Temperature Control System" class="project-image">
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Control Systems</span><span>Mechatronics</span></div>
-            <h3>PID-Based Temperature Control System (Arduino + Simulink)</h3>
-            <p class="proj-role"><strong>Role:</strong> System designer — modeling, controller tuning, hardware implementation</p>
+            <div class="proj-cats"><span>Control Systems</span><span>Embedded Hardware</span><span>Thermal Systems</span></div>
+            <h3>Closed-Loop PID Temperature Controller — Hardware Implementation &amp; Simulink Validation</h3>
+            <p class="proj-role"><strong>Role:</strong> System designer — plant characterisation, hardware build, PID implementation, Simulink modelling, closed-loop testing and analysis</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Closed-loop thermal control requires precise gain tuning to handle system nonlinearities including sensor delay and thermal lag.</p>
-                <p><strong>Approach:</strong> Designed and implemented a PID temperature control system using Arduino with thermocouple feedback and PWM-driven heating. Modeled system dynamics in Simulink, tuned controller gains through systematic methods, and validated closed-loop performance through hardware testing under realistic operating conditions.</p>
-                <p><strong>Tools:</strong> Arduino · MATLAB/Simulink · Thermocouple · PWM control</p>
+                <p><strong>Problem:</strong> Precise thermal regulation is essential in microfluidic and embedded diagnostic applications where biochemical reactions are highly temperature-sensitive. Designing a PID controller for a real thermal system requires characterising the plant dynamics first — including thermal inertia, sensor lag, and actuator non-idealities — before any gain tuning is meaningful. These hardware realities make embedded thermal control significantly more complex than textbook PID design.</p>
+                <p><strong>Approach:</strong> Built and characterised a complete closed-loop thermal system. Began with open-loop step-response testing to extract plant parameters: a 50% PWM duty cycle produced a steady-state temperature rise of ~42.5°C above ambient, with a thermal time constant of approximately 12.5 seconds. This data guided PID gain selection and confirmed the need for derivative action to counteract thermal lag. Hardware comprised a K-type thermocouple with MAX6675 digital interface for feedback, a logic-level MOSFET (IRL3803L) for PWM-driven heater switching, and a rotary encoder for real-time setpoint adjustment — all controlled by an Arduino Uno executing the PID algorithm at a fixed sampling rate. The system was independently modelled in MATLAB/Simulink for controller validation before hardware deployment. Closed-loop testing documented practical control limitations: sensor conversion latency introduced feedback delay, integral windup caused heater over-run at setpoint, and encoder noise contributed minor disturbances. Each failure mode was diagnosed, documented, and linked to its root cause in hardware.</p>
+                <p><strong>Results:</strong> System successfully regulated temperature to user-defined setpoints under closed-loop control. Overshoot and windup were characterised quantitatively and improvement strategies — anti-windup integration, derivative filtering — were identified for future implementation.</p>
+                <p><strong>Tools:</strong> Arduino Uno · K-type thermocouple · MAX6675 · IRL3803L MOSFET · MATLAB/Simulink · PWM control</p>
               </div>
             </div>
           </div>
@@ -385,15 +391,16 @@
            <img src="assets/images/dom.png" alt="Bearing Fault Analysis" class="project-image">
           </div>
           <div class="proj-body">
-            <div class="proj-cats"><span>Condition Monitoring</span><span>Vibration Analysis</span></div>
-            <h3>Experimental Analysis of Bearing Faults Using Vibration &amp; Acoustics</h3>
-            <p class="proj-role"><strong>Role:</strong> Experimentalist — sensor setup, data acquisition, frequency-domain analysis</p>
+            <div class="proj-cats"><span>Condition Monitoring</span><span>Experimental</span><span>Signal Processing</span></div>
+            <h3>Multi-Signal Bearing Fault Characterisation — Vibration, Acoustics &amp; Current Analysis</h3>
+            <p class="proj-role"><strong>Role:</strong> Experimentalist — sensor system design, data acquisition, frequency-domain analysis, and ML-ready dataset preparation</p>
             <div class="proj-accordion">
               <button class="proj-toggle">Problem &amp; Approach ↓</button>
               <div class="proj-details">
-                <p><strong>Problem:</strong> Rolling-element bearing defects produce characteristic frequency signatures that, when undetected, lead to catastrophic drivetrain failure.</p>
-                <p><strong>Approach:</strong> Investigated bearing defects through experimental measurement of vibration, sound, and electrical signals across multiple operating speeds. Analyzed frequency-domain responses using FFT to identify defect frequency signatures and characterize fault severity — contributing to condition-monitoring methodology development.</p>
-                <p><strong>Tools:</strong> Vibration &amp; acoustic sensing equipment · FFT analysis · MATLAB</p>
+                <p><strong>Problem:</strong> Rolling-element bearing failures are responsible for a disproportionate share of rotating machinery downtime. Fault signatures are embedded in vibration, acoustic, and current signals — but identifying which signal type, at which frequency range, most reliably captures defects of varying severity is an open engineering question. Without experimental validation, condition monitoring systems cannot be properly specified.</p>
+                <p><strong>Approach:</strong> Designed and executed a controlled experimental study on nine 6203-type deep groove ball bearings — one healthy and eight with artificially induced inner and outer race defects at four severity levels (crack sizes: 0.2 mm, 0.35 mm, 0.5 mm, and 1.0 mm), produced by Electro Discharge Machining to ensure clean, consistent defect geometry. Motor supply voltage was swept from 15V to 60V in 5V steps to simulate varying shaft speeds, giving ten operating points per bearing. At each point, vibration (Y and Z axes via ADXL335 accelerometers), acoustic emissions (Max9814 microphone, 50 dB sensitivity), and motor current signals were recorded simultaneously through an Arduino-MATLAB/Simulink data acquisition chain at a step time of 0.00125 s — yielding 8,000 data points per test. Acoustic tests were repeated twice per voltage level and averaged for ML dataset consistency. All signals were converted to the frequency domain using FFT and plotted on logarithmic magnitude-frequency axes, with analysis windows selected from literature: 0–5 kHz for vibration, 0–2 kHz for current, and 0–20 kHz for acoustics. Healthy bearing spectra established clean baseline profiles; defective bearings produced identifiable elevated harmonic content and impulsive peaks characteristic of race-contact faults.</p>
+                <p><strong>Outcome:</strong> Produced a labelled multi-signal dataset across 9 bearing conditions and 10 speed levels — structured for future supervised ML classification. Dataset preparation included normalisation protocols, statistical feature extraction (RMS, kurtosis, crest factor), and spectrogram generation pathways for CNN-based fault classifiers.</p>
+                <p><strong>Tools:</strong> Arduino UNO · ADXL335 accelerometers · Max9814 microphone · MATLAB/Simulink · FFT signal processing</p>
               </div>
             </div>
           </div>
